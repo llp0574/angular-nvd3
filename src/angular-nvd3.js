@@ -248,6 +248,8 @@
                                 if (h = scope.options.chart.height) {
                                     if (!isNaN(+h)) h += 'px'; //check if height is number
                                     scope.svg.attr('height', h).style({height: h});
+                                } else {
+                                    scope.svg.attr('height', element[0].offsetHeight).style({height: element[0].offsetHeight});
                                 }
                                 if (w = scope.options.chart.width) {
                                     if (!isNaN(+w)) w += 'px'; //check if width is number
